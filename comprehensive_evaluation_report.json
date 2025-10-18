@@ -1,0 +1,105 @@
+{
+  "evaluation_date": "2025-10-18T18:41:54.114580",
+  "model_metadata": {
+    "dataset_path": "data/training_dataset.csv",
+    "training_size": 470,
+    "testing_size": 118,
+    "total_features": 599,
+    "training_date": "2025-10-18T00:40:00.689483",
+    "vectorizer_params": {
+      "max_features": 2000,
+      "ngram_range": [
+        1,
+        3
+      ],
+      "sublinear_tf": true
+    }
+  },
+  "accuracy_metrics": {
+    "accuracy": 0.5,
+    "precision": 0.25,
+    "recall": 0.5,
+    "f1_score": 0.3333333333333333,
+    "classification_report": {
+      "friend": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 59.0
+      },
+      "professional": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 59.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.25,
+        "recall": 0.5,
+        "f1-score": 0.3333333333333333,
+        "support": 118.0
+      },
+      "weighted avg": {
+        "precision": 0.25,
+        "recall": 0.5,
+        "f1-score": 0.3333333333333333,
+        "support": 118.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        59,
+        0
+      ],
+      [
+        59,
+        0
+      ]
+    ],
+    "average_similarity": 0.9019067777594434,
+    "similarity_std": 0.19949508673195038
+  },
+  "quality_metrics": {
+    "average_length": 173.32203389830508,
+    "length_std": 85.41115726703255,
+    "length_percentiles": {
+      "25th": 94.0,
+      "50th": 189.0,
+      "75th": 224.0,
+      "90th": 293.49999999999994,
+      "95th": 331.45
+    },
+    "average_similarity": 0.9019067777594434,
+    "similarity_std": 0.19949508673195038,
+    "average_response_time": 0.0016094661016949152,
+    "total_responses": 118
+  },
+  "r_squared_metrics": {
+    "r_squared": 0.4473128904178275,
+    "mean_squared_error": 4031.888823306888,
+    "mean_absolute_error": 51.415132293643474,
+    "root_mean_squared_error": 63.49715602534406,
+    "coefficients": [
+      4.901660419838348,
+      73.74307623709007
+    ],
+    "intercept": -39.904843007241254
+  },
+  "summary": {
+    "overall_performance": "Needs Improvement",
+    "key_strengths": [
+      "Good semantic similarity matching",
+      "Detailed responses",
+      "Fast response times"
+    ],
+    "areas_for_improvement": [
+      "Response length prediction could be improved"
+    ],
+    "recommendations": [
+      "Model shows excellent performance across all metrics",
+      "Consider adding more diverse training data for even better coverage",
+      "Monitor response quality in production environment"
+    ]
+  }
+}

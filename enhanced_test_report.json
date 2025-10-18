@@ -1,0 +1,72 @@
+{
+  "test_date": "2025-10-18T19:23:58.215209",
+  "model_metadata": {
+    "dataset_path": "mental_health_responses.csv",
+    "training_size": 380,
+    "testing_size": 96,
+    "total_features": 868,
+    "training_date": "2025-10-18T19:23:48.044750",
+    "vectorizer_params": {
+      "max_features": 3000,
+      "ngram_range": [
+        1,
+        4
+      ],
+      "sublinear_tf": true
+    }
+  },
+  "accuracy_metrics": {
+    "accuracy": 0.5520833333333334,
+    "precision": 0.7637362637362637,
+    "recall": 0.5520833333333334,
+    "f1_score": 0.4396633636487037,
+    "average_similarity": 0.4964204648003649,
+    "similarity_std": 0.2425002425488564
+  },
+  "regression_metrics": {
+    "r_squared": 0.43721072856384424,
+    "mean_squared_error": 2682.9454294775255,
+    "mean_absolute_error": 38.61829004520737,
+    "root_mean_squared_error": 51.79715657714741,
+    "coefficients": [
+      4.046828563183953,
+      -23.709428326285696
+    ],
+    "intercept": 54.49669386832194,
+    "correlation_input_response": 0.6560714016618829,
+    "correlation_similarity_response": 0.016091557863259946
+  },
+  "quality_metrics": {
+    "average_length": 152.90625,
+    "length_std": 68.87822559370632,
+    "length_percentiles": {
+      "25th": 94.0,
+      "50th": 158.0,
+      "75th": 191.0,
+      "90th": 228.0,
+      "95th": 304.0
+    },
+    "average_similarity": 0.4964204648003649,
+    "similarity_std": 0.2425002425488564,
+    "average_response_time": 0.0012529583333333334,
+    "fallback_count": 10,
+    "fallback_rate": 0.10416666666666667,
+    "total_responses": 96
+  },
+  "summary": {
+    "overall_performance": "Needs Improvement",
+    "key_strengths": [
+      "Good semantic similarity matching",
+      "Detailed responses",
+      "Fast response times"
+    ],
+    "areas_for_improvement": [
+      "Response length prediction could be improved"
+    ],
+    "recommendations": [
+      "Model shows good performance across most metrics",
+      "Consider adding more diverse training data for better coverage",
+      "Monitor response quality in production environment"
+    ]
+  }
+}

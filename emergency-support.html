@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Emergency Support - Healo</title>
+    <meta content="Immediate mental health crisis support and emergency resources" name="description">
+    <meta content="emergency support, crisis help, mental health emergency, suicide prevention, crisis hotline" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+        /* Background Image Styles */
+        body {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGQkYwMDtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIzMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRjZCMjE7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMDBGRkZGO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRjAwRkY7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iODAwIiBmaWxsPSIjMDAxQzM0Ii8+CjxwYXRoIGQ9Ik0yMDAgMjAwIFEyMDAgMTAwIDMwMCAyMDAgUTQwMCAzMDAgNTAwIDIwMCBRNjAwIDEwMCA3MDAgMjAwIFE4MDAgMzAwIDkwMCAyMDAgUTEwMDAgMTAwIDEwNTAgMjAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjgiLz4KPHA+dGggZD0iTTE1MCAzMDAgUTE1MCAyMDAgMjUwIDMwMCBRMzUwIDQwMCA0NTAgMzAwIFE1NTAgMjAwIDY1MCAzMDAgUTc1MCA0MDAgODUwIDMwMCBROTUwIDIwMCAxMDAwIDMwMCIgc3Ryb2tlPSJ1cmwoI2dyYWRpZW50MSkiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC43Ii8+CjxwYXRoIGQ9Ik0xMDAgNDAwIFEyMDAgMzAwIDMwMCA0MDAgUTQwMCA1MDAgNTAwIDQwMCBRNjAwIDMwMCA3MDAgNDAwIFE4MDAgNTAwIDkwMCA0MDAgUTEwMDAgMzAwIDEwNTAgNDAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjYiLz4KPHA+dGggZD0iTTUwIDUwMCBRMTUwIDQwMCAyNTAgNTAwIFEzNTAgNjAwIDQ1MCA1MDAgUTU1MCA0MDAgNjUwIDUwMCBRNzUwIDYwMCA4NTAgNTAwIFE5NTAgNDAwIDEwMDAgNTAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI1IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjc1Ii8+CjxwYXRoIGQ9Ik0xMDAgNjAwIFEyMDAgNTAwIDMwMCA2MDAgUTQwMCA3MDAgNTAwIDYwMCBRNjAwIDUwMCA3MDAgNjAwIFE4MDAgNzAwIDkwMCA2MDAgUTEwMDAgNTAwIDEwNTAgNjAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjYiLz4KPHA+dGggZD0iTTUwIDcwMCBRMTUwIDYwMCAyNTAgNzAwIFEzNTAgODAwIDQ1MCA3MDAgUTU1MCA2MDAgNjUwIDcwMCBRNzUwIDgwMCA4NTAgNzAwIFE5NTAgNjAwIDEwMDAgNzAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjciLz4KPHN2Zz4K');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 1;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 28, 52, 0.85) 0%, rgba(0, 0, 0, 0.9) 100%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 2;
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+
+        .back-button {
+            background: linear-gradient(135deg, #FF416C, #FF4B2B);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            font-weight: 600;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            color: white;
+            text-decoration: none;
+        }
+
+        .page-title {
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .page-title h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .page-title p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .emergency-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(15px);
+        }
+
+        .emergency-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .emergency-card.critical {
+            border: 3px solid #FF416C;
+            background: linear-gradient(135deg, rgba(255, 65, 108, 0.1) 0%, rgba(255, 75, 43, 0.1) 100%);
+        }
+
+        .emergency-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FF416C, #FF4B2B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .emergency-card.critical .emergency-icon {
+            background: linear-gradient(135deg, #FF416C, #FF4B2B);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 65, 108, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 65, 108, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 65, 108, 0);
+            }
+        }
+
+        .emergency-icon i {
+            font-size: 35px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .emergency-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .emergency-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .emergency-number {
+            background: linear-gradient(135deg, #FF416C, #FF4B2B);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 18px;
+            margin: 15px 0;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+        }
+
+        .emergency-number:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 65, 108, 0.6);
+            color: white;
+            text-decoration: none;
+        }
+
+        .emergency-info {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .emergency-info strong {
+            color: #333;
+        }
+
+        /* Header Styles */
+        #header {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo:hover {
+            color: #fff;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .crisis-warning {
+            background: rgba(255, 65, 108, 0.1);
+            border: 2px solid #FF416C;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .crisis-warning h4 {
+            color: #FF416C;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .crisis-warning p {
+            color: #666;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .country-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .country-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .country-btn.active {
+            background: linear-gradient(135deg, #FF416C, #FF4B2B);
+            box-shadow: 0 5px 15px rgba(255, 65, 108, 0.4);
+        }
+
+        .country-resources {
+            display: none;
+        }
+
+        .country-resources.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .emergency-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .nav-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo">
+                <i class="bx bx-heart"></i> Healo
+            </a>
+
+            <nav class="nav-container">
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="index.html#features" class="nav-button">Features</a>
+                <a href="articles.html" class="nav-button">Articles</a>
+                <a href="videos.html" class="nav-button">Videos</a>
+                <a href="index.html#about" class="nav-button">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <a href="index.html" class="back-button">
+                <i class="bi bi-arrow-left"></i>
+                Back to Home
+            </a>
+
+            <div class="page-title">
+                <h1><i class="bx bx-shield"></i> Emergency Support</h1>
+                <p>Immediate help and crisis resources when you need them most</p>
+            </div>
+
+            <div class="crisis-warning">
+                <h4>⚠️ If you're in immediate danger, call your local emergency number</h4>
+                <p>These resources are available 24/7 for mental health emergencies and crisis support worldwide</p>
+            </div>
+
+            <!-- Country Selection -->
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 30px; margin-bottom: 40px; text-align: center;">
+                <h3 style="color: white; margin-bottom: 20px;">🌍 Select Your Country/Region</h3>
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <button onclick="showCountryResources('usa')" class="country-btn active" id="btn-usa">🇺🇸 USA</button>
+                    <button onclick="showCountryResources('uk')" class="country-btn" id="btn-uk">🇬🇧 UK</button>
+                    <button onclick="showCountryResources('canada')" class="country-btn" id="btn-canada">🇨🇦 Canada</button>
+                    <button onclick="showCountryResources('australia')" class="country-btn" id="btn-australia">🇦🇺 Australia</button>
+                    <button onclick="showCountryResources('india')" class="country-btn" id="btn-india">🇮🇳 India</button>
+                    <button onclick="showCountryResources('germany')" class="country-btn" id="btn-germany">🇩🇪 Germany</button>
+                    <button onclick="showCountryResources('france')" class="country-btn" id="btn-france">🇫🇷 France</button>
+                    <button onclick="showCountryResources('japan')" class="country-btn" id="btn-japan">🇯🇵 Japan</button>
+                </div>
+            </div>
+
+            <!-- USA Resources -->
+            <div id="usa-resources" class="country-resources active">
+                <h2 style="color: white; text-align: center; margin-bottom: 30px;">🇺🇸 United States Emergency Resources</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>National Suicide Prevention Lifeline</h3>
+                        <p>24/7 crisis support for anyone in emotional distress or suicidal crisis</p>
+                        <a href="tel:988" class="emergency-number">📞 Call 988</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Language:</strong> English & Spanish<br>
+                            <strong>Deaf/Hard of Hearing:</strong> Use your preferred relay service or dial 711 then 988
+                        </div>
+                    </div>
+
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-message"></i></div>
+                        <h3>Crisis Text Line</h3>
+                        <p>Free, 24/7 crisis support via text message</p>
+                        <a href="sms:741741&body=HELLO" class="emergency-number">💬 Text HOME to 741741</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Response Time:</strong> Under 5 minutes<br>
+                            <strong>Confidential:</strong> Completely anonymous
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-group"></i></div>
+                        <h3>Veterans Crisis Line</h3>
+                        <p>Specialized support for veterans and their families</p>
+                        <a href="tel:988" class="emergency-number">📞 Call 988, Press 1</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Specialized:</strong> Veterans & families<br>
+                            <strong>Text:</strong> Text 838255
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-user"></i></div>
+                        <h3>Emergency Services</h3>
+                        <p>Immediate emergency response in your area</p>
+                        <a href="tel:911" class="emergency-number">🚨 Call 911</a>
+                        <div class="emergency-info">
+                            <strong>When to call:</strong> Immediate danger<br>
+                            <strong>Response:</strong> Police, fire, medical<br>
+                            <strong>Coverage:</strong> All areas
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UK Resources -->
+            <div id="uk-resources" class="country-resources">
+                <h2 style="color: white; text-align: center; margin-bottom: 30px;">🇬🇧 United Kingdom Emergency Resources</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>Samaritans</h3>
+                        <p>24/7 emotional support for anyone in distress or despair</p>
+                        <a href="tel:116123" class="emergency-number">📞 Call 116 123</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Free:</strong> From any phone<br>
+                            <strong>Confidential:</strong> Completely anonymous
+                        </div>
+                    </div>
+
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-message"></i></div>
+                        <h3>Crisis Text Line UK</h3>
+                        <p>Free, 24/7 crisis support via text message</p>
+                        <a href="sms:85258&body=HOME" class="emergency-number">💬 Text HOME to 85258</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Response Time:</strong> Under 5 minutes<br>
+                            <strong>Free:</strong> Standard message rates apply
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-user"></i></div>
+                        <h3>Emergency Services</h3>
+                        <p>Immediate emergency response in your area</p>
+                        <a href="tel:999" class="emergency-number">🚨 Call 999</a>
+                        <div class="emergency-info">
+                            <strong>When to call:</strong> Immediate danger<br>
+                            <strong>Response:</strong> Police, fire, medical<br>
+                            <strong>Coverage:</strong> All UK areas
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-chat"></i></div>
+                        <h3>Shout</h3>
+                        <p>UK's first 24/7 crisis text service</p>
+                        <a href="sms:85258&body=SHOUT" class="emergency-number">💬 Text SHOUT to 85258</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Format:</strong> Text messaging<br>
+                            <strong>Volunteer trained:</strong> Crisis counselors
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Canada Resources -->
+            <div id="canada-resources" class="country-resources">
+                <h2 style="color: white; text-align: center; margin-bottom: 30px;">🇨🇦 Canada Emergency Resources</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>Canada Suicide Prevention Service</h3>
+                        <p>24/7 crisis support and suicide prevention</p>
+                        <a href="tel:8334564566" class="emergency-number">📞 Call 833-456-4566</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Language:</strong> English & French<br>
+                            <strong>Coverage:</strong> All provinces and territories
+                        </div>
+                    </div>
+
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-message"></i></div>
+                        <h3>Crisis Text Line Canada</h3>
+                        <p>Free, 24/7 crisis support via text message</p>
+                        <a href="sms:686868&body=HOME" class="emergency-number">💬 Text HOME to 686868</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Response Time:</strong> Under 5 minutes<br>
+                            <strong>Free:</strong> Standard message rates apply
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-user"></i></div>
+                        <h3>Emergency Services</h3>
+                        <p>Immediate emergency response in your area</p>
+                        <a href="tel:911" class="emergency-number">🚨 Call 911</a>
+                        <div class="emergency-info">
+                            <strong>When to call:</strong> Immediate danger<br>
+                            <strong>Response:</strong> Police, fire, medical<br>
+                            <strong>Coverage:</strong> All provinces and territories
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-chat"></i></div>
+                        <h3>Kids Help Phone</h3>
+                        <p>Crisis support for children and youth</p>
+                        <a href="tel:18006686868" class="emergency-number">📞 Call 1-800-668-6868</a>
+                        <div class="emergency-info">
+                            <strong>Age:</strong> Under 20<br>
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Languages:</strong> English, French, and many others
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Australia Resources -->
+            <div id="australia-resources" class="country-resources">
+                <h2 style="color: white; text-align: center; margin-bottom: 30px;">🇦🇺 Australia Emergency Resources</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>Lifeline Australia</h3>
+                        <p>24/7 crisis support and suicide prevention</p>
+                        <a href="tel:131114" class="emergency-number">📞 Call 13 11 14</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Free:</strong> From any phone<br>
+                            <strong>Coverage:</strong> All states and territories
+                        </div>
+                    </div>
+
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-message"></i></div>
+                        <h3>Crisis Text Line Australia</h3>
+                        <p>Free, 24/7 crisis support via text message</p>
+                        <a href="sms:0477313114&body=HOME" class="emergency-number">💬 Text HOME to 0477 31 31 14</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Response Time:</strong> Under 5 minutes<br>
+                            <strong>Free:</strong> Standard message rates apply
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-user"></i></div>
+                        <h3>Emergency Services</h3>
+                        <p>Immediate emergency response in your area</p>
+                        <a href="tel:000" class="emergency-number">🚨 Call 000</a>
+                        <div class="emergency-info">
+                            <strong>When to call:</strong> Immediate danger<br>
+                            <strong>Response:</strong> Police, fire, medical<br>
+                            <strong>Coverage:</strong> All states and territories
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-child"></i></div>
+                        <h3>Kids Helpline</h3>
+                        <p>Crisis support for children and young people</p>
+                        <a href="tel:1800551800" class="emergency-number">📞 Call 1800 55 1800</a>
+                        <div class="emergency-info">
+                            <strong>Age:</strong> 5-25 years<br>
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Free:</strong> From any phone
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- India Resources -->
+            <div id="india-resources" class="country-resources">
+                <h2 style="color: white; text-align: center; margin-bottom: 30px;">🇮🇳 India Emergency Resources</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>KIRAN Mental Health Helpline</h3>
+                        <p>24/7 mental health crisis support</p>
+                        <a href="tel:18005990019" class="emergency-number">📞 Call 1800-599-0019</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Languages:</strong> Hindi, English, and regional languages<br>
+                            <strong>Free:</strong> Toll-free number
+                        </div>
+                    </div>
+
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>iCall Psychosocial Helpline</h3>
+                        <p>Mental health support and counseling</p>
+                        <a href="tel:9152987821" class="emergency-number">📞 Call 9152987821</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> Monday to Saturday, 8 AM to 10 PM<br>
+                            <strong>Languages:</strong> Hindi, English, Marathi, Gujarati<br>
+                            <strong>Professional:</strong> Trained counselors
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-user"></i></div>
+                        <h3>Emergency Services</h3>
+                        <p>Immediate emergency response in your area</p>
+                        <a href="tel:100" class="emergency-number">🚨 Call 100 (Police)</a>
+                        <div class="emergency-info">
+                            <strong>Police:</strong> 100<br>
+                            <strong>Medical:</strong> 108<br>
+                            <strong>Fire:</strong> 101<br>
+                            <strong>Coverage:</strong> All states and union territories
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-chat"></i></div>
+                        <h3>Vandrevala Foundation</h3>
+                        <p>Mental health support and suicide prevention</p>
+                        <a href="tel:9999666555" class="emergency-number">📞 Call 9999-666-555</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Languages:</strong> Hindi, English<br>
+                            <strong>Specialized:</strong> Suicide prevention
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Germany Resources -->
+            <div id="germany-resources" class="country-resources">
+                <h2 style="color: white; text-align: center; margin-bottom: 30px;">🇩🇪 Germany Emergency Resources</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>TelefonSeelsorge</h3>
+                        <p>24/7 crisis support and emotional counseling</p>
+                        <a href="tel:08001110111" class="emergency-number">📞 Call 0800-1110111</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Language:</strong> German<br>
+                            <strong>Free:</strong> From any phone
+                        </div>
+                    </div>
+
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>Nummer gegen Kummer</h3>
+                        <p>Support for children and young people</p>
+                        <a href="tel:116111" class="emergency-number">📞 Call 116 111</a>
+                        <div class="emergency-info">
+                            <strong>Age:</strong> Children and youth<br>
+                            <strong>Available:</strong> Monday to Saturday, 2 PM to 8 PM<br>
+                            <strong>Free:</strong> From any phone
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-user"></i></div>
+                        <h3>Emergency Services</h3>
+                        <p>Immediate emergency response in your area</p>
+                        <a href="tel:112" class="emergency-number">🚨 Call 112</a>
+                        <div class="emergency-info">
+                            <strong>When to call:</strong> Immediate danger<br>
+                            <strong>Response:</strong> Police, fire, medical<br>
+                            <strong>Coverage:</strong> All federal states
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-chat"></i></div>
+                        <h3>U25 Online Beratung</h3>
+                        <p>Online counseling for young people under 25</p>
+                        <div class="emergency-info">
+                            <strong>Website:</strong> u25-freiburg.de<br>
+                            <strong>Age:</strong> Under 25<br>
+                            <strong>Format:</strong> Email counseling
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- France Resources -->
+            <div id="france-resources" class="country-resources">
+                <h2 style="color: white; text-align: center; margin-bottom: 30px;">🇫🇷 France Emergency Resources</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>SOS Amitié</h3>
+                        <p>24/7 emotional support and crisis intervention</p>
+                        <a href="tel:0901973980" class="emergency-number">📞 Call 09 72 39 40 50</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Language:</strong> French<br>
+                            <strong>Confidential:</strong> Anonymous support
+                        </div>
+                    </div>
+
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>Suicide Écoute</h3>
+                        <p>Specialized suicide prevention hotline</p>
+                        <a href="tel:0145394000" class="emergency-number">📞 Call 01 45 39 40 00</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Specialized:</strong> Suicide prevention<br>
+                            <strong>Language:</strong> French
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-user"></i></div>
+                        <h3>Emergency Services</h3>
+                        <p>Immediate emergency response in your area</p>
+                        <a href="tel:112" class="emergency-number">🚨 Call 112</a>
+                        <div class="emergency-info">
+                            <strong>When to call:</strong> Immediate danger<br>
+                            <strong>Response:</strong> Police, fire, medical<br>
+                            <strong>Coverage:</strong> All regions
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-child"></i></div>
+                        <h3>Fil Santé Jeunes</h3>
+                        <p>Health and mental health support for young people</p>
+                        <a href="tel:0800235123" class="emergency-number">📞 Call 0 800 235 123</a>
+                        <div class="emergency-info">
+                            <strong>Age:</strong> 12-25 years<br>
+                            <strong>Available:</strong> Monday to Friday, 9 AM to 11 PM<br>
+                            <strong>Free:</strong> From any phone
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Japan Resources -->
+            <div id="japan-resources" class="country-resources">
+                <h2 style="color: white; text-align: center; margin-bottom: 30px;">🇯🇵 Japan Emergency Resources</h2>
+                <div class="emergency-grid">
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>Inochi no Denwa</h3>
+                        <p>24/7 suicide prevention and crisis support</p>
+                        <a href="tel:0120273827" class="emergency-number">📞 Call 0120-027-3827</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Language:</strong> Japanese<br>
+                            <strong>Free:</strong> Toll-free number
+                        </div>
+                    </div>
+
+                    <div class="emergency-card critical">
+                        <div class="emergency-icon"><i class="bx bx-phone-call"></i></div>
+                        <h3>Yorisoi Hotline</h3>
+                        <p>Mental health crisis support and counseling</p>
+                        <a href="tel:0120563946" class="emergency-number">📞 Call 0120-056-3946</a>
+                        <div class="emergency-info">
+                            <strong>Available:</strong> 24/7<br>
+                            <strong>Language:</strong> Japanese<br>
+                            <strong>Specialized:</strong> Mental health crisis
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-user"></i></div>
+                        <h3>Emergency Services</h3>
+                        <p>Immediate emergency response in your area</p>
+                        <a href="tel:110" class="emergency-number">🚨 Call 110 (Police)</a>
+                        <div class="emergency-info">
+                            <strong>Police:</strong> 110<br>
+                            <strong>Fire/Medical:</strong> 119<br>
+                            <strong>Coverage:</strong> All prefectures
+                        </div>
+                    </div>
+
+                    <div class="emergency-card">
+                        <div class="emergency-icon"><i class="bx bx-child"></i></div>
+                        <h3>Child Line Japan</h3>
+                        <p>Crisis support for children and young people</p>
+                        <a href="tel:0120099600" class="emergency-number">📞 Call 0120-99-6600</a>
+                        <div class="emergency-info">
+                            <strong>Age:</strong> Under 18<br>
+                            <strong>Available:</strong> Monday to Saturday, 4 PM to 9 PM<br>
+                            <strong>Free:</strong> From any phone
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 30px; margin-top: 40px; text-align: center;">
+                <h3 style="color: white; margin-bottom: 20px;">Remember: You Are Not Alone</h3>
+                <p style="color: white; font-size: 18px; line-height: 1.6;">
+                    Mental health emergencies are serious, but they are temporary. These resources are here to help you through difficult times.
+                    <strong>Reaching out for help is a sign of strength, not weakness.</strong> You deserve support, and help is available 24/7.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 28, 52, 0.95) 100%)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)';
+            }
+        });
+
+        // Country switching functionality
+        function showCountryResources(country) {
+            // Remove active class from all country buttons
+            document.querySelectorAll('.country-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to clicked button
+            document.getElementById('btn-' + country).classList.add('active');
+
+            // Hide all country resource sections
+            document.querySelectorAll('.country-resources').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show selected country's resources
+            document.getElementById(country + '-resources').classList.add('active');
+        }
+
+        // Auto-dial functionality for emergency numbers
+        document.querySelectorAll('.emergency-number[href^="tel:"]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                if (confirm('This will dial an emergency number. Continue?')) {
+                    // Allow the default tel: link behavior
+                } else {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

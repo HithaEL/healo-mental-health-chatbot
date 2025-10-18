@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Healo - Mental Health Assistant</title>
+    <meta content="AI-powered mental health chatbot and wellness resources" name="description">
+    <meta content="mental health, chatbot, therapy, wellness, AI assistant" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+        /* Background Image Styles */
+        body {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI4MDAiIHZpZXdCb3g9IjAgMCAxMjAwIDgwMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQxIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6I0ZGQkYwMDtzdG9wLW9wYWNpdHk6MSIgLz4KPHN0b3Agb2Zmc2V0PSIzMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRjZCMjE7c3RvcC1vcGFjaXR5OjEiIC8+CjxzdG9wIG9mZnNldD0iNjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMDBGRkZGO3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRjAwRkY7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEyMDAiIGhlaWdodD0iODAwIiBmaWxsPSIjMDAxQzM0Ii8+CjxwYXRoIGQ9Ik0yMDAgMjAwIFEyMDAgMTAwIDMwMCAyMDAgUTQwMCAzMDAgNTAwIDIwMCBRNjAwIDEwMCA3MDAgMjAwIFE4MDAgMzAwIDkwMCAyMDAgUTEwMDAgMTAwIDEwNTAgMjAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjgiLz4KPHA+dGggZD0iTTE1MCAzMDAgUTE1MCAyMDAgMjUwIDMwMCBRMzUwIDQwMCA0NTAgMzAwIFE1NTAgMjAwIDY1MCAzMDAgUTc1MCA0MDAgODUwIDMwMCBROTUwIDIwMCAxMDAwIDMwMCIgc3Ryb2tlPSJ1cmwoI2dyYWRpZW50MSkiIHN0cm9rZS13aWR0aD0iNiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC43Ii8+CjxwYXRoIGQ9Ik0xMDAgNDAwIFEyMDAgMzAwIDMwMCA0MDAgUTQwMCA1MDAgNTAwIDQwMCBRNjAwIDMwMCA3MDAgNDAwIFE4MDAgNTAwIDkwMCA0MDAgUTEwMDAgMzAwIDEwNTAgNDAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjYiLz4KPHA+dGggZD0iTTUwIDUwMCBRMTUwIDQwMCAyNTAgNTAwIFEzNTAgNjAwIDQ1MCA1MDAgUTU1MCA0MDAgNjUwIDUwMCBRNzUwIDYwMCA4NTAgNTAwIFE5NTAgNDAwIDEwMDAgNTAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI1IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjc1Ii8+CjxwYXRoIGQ9Ik0xMDAgNjAwIFEyMDAgNTAwIDMwMCA2MDAgUTQwMCA3MDAgNTAwIDYwMCBRNjAwIDUwMCA3MDAgNjAwIFE4MDAgNzAwIDkwMCA2MDAgUTEwMDAgNTAwIDEwNTAgNjAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjYiLz4KPHA+dGggZD0iTTUwIDcwMCBRMTUwIDYwMCAyNTAgNzAwIFEzNTAgODAwIDQ1MCA3MDAgUTU1MCA2MDAgNjUwIDcwMCBRNzUwIDgwMCA4NTAgNzAwIFE5NTAgNjAwIDEwMDAgNzAwIiBzdHJva2U9InVybCgjZ3JhZGllbnQxKSIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjciLz4KPHN2Zz4K');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 1;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 28, 52, 0.85) 0%, rgba(0, 0, 0, 0.9) 100%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Header Styles */
+        #header {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo:hover {
+            color: #fff;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 2;
+            padding: 120px 0 80px 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+            animation: textGlow 3s ease-in-out infinite alternate;
+            position: relative;
+            z-index: 11;
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+            }
+
+            100% {
+                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 107, 107, 0.6);
+            }
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+            opacity: 0.9;
+        }
+
+
+        /* Main Buttons */
+        .main-buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0 60px 0;
+            flex-wrap: wrap;
+        }
+
+        .main-button {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(15px);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            min-width: 300px;
+        }
+
+        .main-button:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .main-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+        }
+
+        .main-icon i {
+            font-size: 35px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-button h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .main-button p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .count-badge {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 15px;
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            margin: 100px 0;
+            border-radius: 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .horizontal-features-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(15px);
+            min-width: 250px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #FF6B6B, #4ECDC4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+        }
+
+        .feature-icon i {
+            font-size: 30px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h4 a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        /* Articles & Videos Section */
+        .content-section {
+            padding: 80px 0;
+            margin: 100px 0;
+        }
+
+        .content-buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .main-article-button,
+        .main-video-button {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border-radius: 25px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(20px);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            min-width: 350px;
+        }
+
+        .main-article-button:hover,
+        .main-video-button:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .article-main-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #FF416C, #FF4B2B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            border: 4px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .video-main-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #36D1DC, #5B86E5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            border: 4px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .main-article-button h3,
+        .main-video-button h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .main-article-button p,
+        .main-video-button p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .article-count,
+        .video-count {
+            background: linear-gradient(135deg, #FF416C, #FF4B2B);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(255, 65, 108, 0.3);
+        }
+
+        .video-count {
+            background: linear-gradient(135deg, #36D1DC, #5B86E5);
+            box-shadow: 0 5px 15px rgba(54, 209, 220, 0.3);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            margin: 50px 0;
+            border-radius: 30px;
+        }
+
+        .about-content {
+            color: white;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .main-buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .horizontal-features-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content-buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .nav-button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo">
+                <i class="bx bx-heart"></i> Healo
+            </a>
+
+            <nav class="nav-container">
+                <a href="index.html" class="nav-button">Home</a>
+                <a href="#features" class="nav-button">Features</a>
+                <a href="articles.html" class="nav-button">Articles</a>
+                <a href="videos.html" class="nav-button">Videos</a>
+                <a href="#about" class="nav-button">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ======= Hero Section ======= -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Healo</h1>
+            <p>Your AI-powered mental health companion for a happier, healthier life</p>
+
+            <div class="main-buttons-container">
+                <a href="chatbot.html" class="main-button">
+                    <div class="main-icon">
+                        <i class="bx bx-chat"></i>
+                    </div>
+                    <h3>Start Conversation</h3>
+                    <p>Chat with Healo for immediate mental health support</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mental Health Tools</h2>
+            </div>
+
+            <div class="horizontal-features-container">
+                <a href="stress-management.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bx bx-leaf"></i>
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; color: #FF6B6B; border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold; box-shadow: 0 2px 6px rgba(255, 255, 255, 0.4);">💚</div>
+                    </div>
+                    <h4>Reduce Stress</h4>
+                    <p>Learn effective stress management techniques and relaxation methods.</p>
+                </a>
+
+                <a href="sleep-help.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bx bx-moon"></i>
+                    </div>
+                    <h4>Sleep Help</h4>
+                    <p>Improve your sleep quality with advanced guided sessions and techniques.</p>
+                </a>
+
+                <a href="music-therapy.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bx bx-music"></i>
+                    </div>
+                    <h4>Music Therapy</h4>
+                    <p>Discover therapeutic music for relaxation, healing, and mental wellness.</p>
+                </a>
+
+                <a href="emergency-support.html" class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bx bx-shield"></i>
+                    </div>
+                    <h4>Emergency Support</h4>
+                    <p>Get immediate help and crisis resources when you need them most.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Articles & Videos Section ======= -->
+    <section id="content" class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Articles & Videos</h2>
+            </div>
+
+            <div class="content-buttons-container">
+                <a href="articles.html" class="main-article-button">
+                    <div class="article-main-icon">
+                        <i class="bx bx-library"></i>
+                    </div>
+                    <h3>Mental Health Articles Library</h3>
+                    <p>Click to explore our comprehensive collection of mental health articles</p>
+                    <div class="article-count">10+ Articles Available</div>
+                </a>
+
+                <a href="videos.html" class="main-video-button">
+                    <div class="video-main-icon">
+                        <i class="bx bx-video"></i>
+                    </div>
+                    <h3>Calming & Meditation Videos</h3>
+                    <p>Click to access our collection of relaxing and meditative videos</p>
+                    <div class="video-count">8+ Videos Available</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 style="margin-bottom: 30px; font-size: 2.5rem;">About</h2>
+                <p>Mental disorders are usually treated by pharmacotherapy or psychotherapy. However, there is a global shortage of human resources for delivering such mental health services. In developed countries there are nine psychiatrists per 100,000 people available, while in developing countries there is one psychiatrist per ten million people.</p>
+
+                <p>To address this problem, conversational agents have arisen interest in recent years, particularly in psychoeducation, behaviour change and self-help. Healo is a rasa based conversational chatbot developed with help of cognitive behavioural therapy with a view of helping people tackle their daily mental issues.</p>
+
+                <p>Healo helps user to deal with issues such as Anxiety, Depression, getting rid of sad thoughts, etc. Healo uses natural language understanding to converse with user. It also maintain a journal to track the progress of users condition. Healo also provides the user with comfort and suggestion for dealing with the issues they are facing.</p>
+
+                <p style="margin-top: 30px; font-weight: 600;">Made by DATA PULSE</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Footer ======= -->
+    <footer class="footer">
+        <div class="container">
+
+        </div>
+    </footer>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 28, 52, 0.95) 100%)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)';
+            }
+        });
+    </script>
+</body>
+
+</html>

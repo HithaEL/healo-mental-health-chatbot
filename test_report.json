@@ -1,0 +1,104 @@
+{
+  "test_date": "2025-10-18T18:47:03.275255",
+  "model_metadata": {
+    "dataset_path": "data/training_dataset.csv",
+    "training_size": 470,
+    "testing_size": 118,
+    "total_features": 599,
+    "training_date": "2025-10-18T00:40:00.689483",
+    "vectorizer_params": {
+      "max_features": 2000,
+      "ngram_range": [
+        1,
+        3
+      ],
+      "sublinear_tf": true
+    }
+  },
+  "quality_metrics": {
+    "total_tests": 118,
+    "successful_responses": 118,
+    "empty_responses": 0,
+    "fallback_responses": 0,
+    "average_response_length": 173.32203389830508,
+    "mode_accuracy": {
+      "friend": 57,
+      "professional": 59
+    },
+    "success_rate": 1.0,
+    "fallback_rate": 0.0
+  },
+  "threshold_analysis": [
+    {
+      "threshold": 0.05,
+      "successful": 50,
+      "fallback": 0,
+      "success_rate": 1.0
+    },
+    {
+      "threshold": 0.1,
+      "successful": 50,
+      "fallback": 0,
+      "success_rate": 1.0
+    },
+    {
+      "threshold": 0.15,
+      "successful": 50,
+      "fallback": 0,
+      "success_rate": 1.0
+    },
+    {
+      "threshold": 0.2,
+      "successful": 50,
+      "fallback": 0,
+      "success_rate": 1.0
+    },
+    {
+      "threshold": 0.25,
+      "successful": 50,
+      "fallback": 0,
+      "success_rate": 1.0
+    },
+    {
+      "threshold": 0.3,
+      "successful": 50,
+      "fallback": 0,
+      "success_rate": 1.0
+    }
+  ],
+  "mode_consistency": [
+    {
+      "input": "I feel really anxious about my job interview tomorrow",
+      "friend_response": "job interviews can be really nervewracking! i totally get that anxious feeling. what specifically is making you most nervous about it?",
+      "professional_response": "job interviews can be really nervewracking! i totally get that anxious feeling. what specifically is making you most nervous about it?",
+      "length_difference": 0
+    },
+    {
+      "input": "I've been having trouble sleeping lately",
+      "friend_response": "racing thoughts at night can make sleep impossible and leave you exhausted. its like your mind wont turn off when you need it to. whats been keeping you awake?",
+      "professional_response": "racing thoughts at night can make sleep impossible and leave you exhausted. its like your mind wont turn off when you need it to. whats been keeping you awake?",
+      "length_difference": 0
+    },
+    {
+      "input": "I feel like I'm not good enough for anyone",
+      "friend_response": "feelings of inadequacy can significantly impact selfesteem and mental health. its important to challenge these negative selfperceptions and recognize your strengths. what are some things you do well, even if they seem small?",
+      "professional_response": "feelings of inadequacy can significantly impact selfesteem and mental health. its important to challenge these negative selfperceptions and recognize your strengths. what are some things you do well, even if they seem small?",
+      "length_difference": 0
+    },
+    {
+      "input": "I'm struggling with depression and don't know what to do",
+      "friend_response": "theres nothing that a person cannot do....you just need to find ways to complete your project.",
+      "professional_response": "theres nothing that a person cannot do....you just need to find ways to complete your project.",
+      "length_difference": 0
+    },
+    {
+      "input": "I feel overwhelmed by all my responsibilities",
+      "friend_response": "feeling overwhelmed is so exhausting. when everything feels like too much, it can be hard to know where to start. whats making you feel most overwhelmed right now?",
+      "professional_response": "feeling overwhelmed is so exhausting. when everything feels like too much, it can be hard to know where to start. whats making you feel most overwhelmed right now?",
+      "length_difference": 0
+    }
+  ],
+  "recommendations": [
+    "Optimal similarity threshold appears to be 0.05"
+  ]
+}
